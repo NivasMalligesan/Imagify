@@ -1,9 +1,10 @@
 import React, { useContext, useState, useEffect, useRef } from 'react';
 import { assets } from '../assets/assets';
-import Users from '../assets/user.webp';
+import Users from '../assets/User.webp';
 import { Link, useNavigate } from 'react-router-dom';
 import { AppContext } from '../context/AppContext.jsx';
-
+import { FaLongArrowAltRight } from 'react-icons/fa';
+import { MdLogout } from "react-icons/md";
 const Navbar = () => {
     const { user, setUser, setShowLogin ,logout , credit } = useContext(AppContext);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -41,7 +42,8 @@ const Navbar = () => {
 
                         {/* User Profile & Dropdown */}
                         <div className='relative' ref={dropdownRef}>
-                            <img 
+                            <MdLogout
+                                size={40}
                                 src={Users} 
                                 className='w-12 drop-shadow cursor-pointer' 
                                 alt="User" 
