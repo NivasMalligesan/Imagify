@@ -39,10 +39,10 @@ const Result = () => {
         <p className={!loading ? 'hidden' : ''}>Loading.....</p>
       </div>
       {!isImageLoaded && 
-      <div className='flex w-full max-w-xl bg-neutral-500 text-white
+      <div className='flex w-full max-w-xl bg-white border border-gray-800 text-white
       text-sm p-0.5 mt-10 rounded-full '>
         <input type="text" placeholder='Describe What You Want To Generate' onChange={e => setInput(e.target.value)} value={input}
-         className='flex-1 bg-transparent outline-none ml-8 max-sm:w-20 placeholder-color'/>
+         className='flex-1  outline-none ml-8 max-sm:w-20 text-black'/>
         <button type='submit' className='bg-zinc-900 px-10 sm:px-16 py-3 rounded-full ' >Generate</button>
       </div>
     }
